@@ -41,6 +41,24 @@ export const questionView = (question = {}) => {
   realScoreText.classList.add('realScoreText');
   quizContainer.appendChild(realScoreText);
 
+  // const helpContent = document.querySelector('.help-overlay-content');
+  // const helpLink1 = document.createElement('a');
+  // helpContent.appendChild();
+  const helpLink1 = document.querySelector('#help_link1');
+  helpLink1.setAttribute('href', question.links[0].href);
+  helpLink1.innerText = question.links[0].text;
+  const helpLink2 = document.querySelector('#help_link2');
+  helpLink2.setAttribute('href', question.links[1].href);
+  helpLink2.innerText = question.links[1].text;
+
+  const cheatText = document.querySelector('#cheat_text');
+  cheatText.innerText =
+    question.correct + ' :   ' + question.answers[question.correct];
+  //(o[key])
+  //console.log(Object.values(question.answers));
+
+  //const question = quizData.questions[currentQuestion].correct;
+
   //return quizContainer;
 };
 

@@ -3,6 +3,7 @@ import { updateQuiz } from './quiz.handler.js';
 import { scoreView } from '../views/score.view.js';
 import { updateRealScore } from '../handlers/realScore.handler.js';
 import { removeQuestion } from '../views/question.view.js';
+import { closeForLastPage } from '../handlers/menubar.handler.js';
 
 export const footerHandler = (event) => {
   removeQuestion();
@@ -13,6 +14,7 @@ export const footerHandler = (event) => {
     }
     if (quizData.quiz.currentQuestion === quizData.questions.length) {
       scoreView(quizData.quiz);
+      closeForLastPage();
     } else {
       updateQuiz(
         quizData.questions[quizData.quiz.currentQuestion],
