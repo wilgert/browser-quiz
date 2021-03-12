@@ -1,10 +1,9 @@
 export const scoreView = (quiz) => {
-  const quizContainer = document.createElement('div');
-  quizContainer.classList.add('quizContainer', 'showQuiz');
+  const quizContainer = document.querySelector('.quizContainer');
 
-  const quizHeader = document.createElement('h3');
-  quizHeader.innerText = 'Summary';
-  quizContainer.appendChild(quizHeader);
+  const questionHeader = document.createElement('h3');
+  questionHeader.innerText = 'Summary';
+  quizContainer.appendChild(questionHeader);
 
   const summaryText = document.createElement('div');
   summaryText.classList.add('question', 'm-5');
@@ -25,5 +24,7 @@ export const scoreView = (quiz) => {
     icon.classList.add('fas', 'fa-times', 'failedIcon');
   }
   quizContainer.appendChild(icon);
-  document.body.appendChild(quizContainer);
+
+  document.querySelector('.helpButton').remove();
+  document.querySelector('.cheatButton').remove();
 };
