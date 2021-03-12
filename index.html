@@ -8,12 +8,11 @@
       crossorigin="anonymous"
     ></script>
     <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css"
       rel="stylesheet"
-      integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl"
-      crossorigin="anonymous"
+      href="./public/bootstrap-5.0.0-beta2-dist/css/bootstrap.css"
     />
     <link href="./public/style.css" rel="stylesheet" />
+    <link rel="shortcut icon" href="./public/favicon.ico" type="image/x-icon" />
   </head>
 
   <body>
@@ -21,15 +20,73 @@
     <div class="startContainer">
       <h1>Start Exam</h1>
       <div class="startFooter">
-        <div class="startFooterText">JavaScript Exam</div>
+        <div class="startFooterText">
+          <a href="https://www.hackyourfuture.net" target="_blank"
+            >HackYourFuture.net</a
+          >
+        </div>
         <a id="startButton" href="#" class="startBtn"
           >Start <i class="fa fa-arrow-right startArrow"></i
         ></a>
       </div>
     </div>
+    <div class="quizContainer">
+      <div class="menuBars">
+        <a id="menuBtn" class="navbar-icon">
+          <i class="fa fa-bars"></i>
+        </a>
+      </div>
+
+      <div class="helpButton">
+        <a id="helpBtn" class="navbar-icon">
+          <i class="fas fa-question"></i>
+        </a>
+        <!-- <span class="tooltiptext">Help</span> -->
+      </div>
+
+      <div class="cheatButton">
+        <a id="cheatBtn" class="navbar-icon">
+          <i class="fas fa-life-ring"></i>
+        </a>
+        <!-- <span class="tooltiptext">Cheat</span> -->
+      </div>
+
+      <div class="overlay" id="overlay_navbar">
+        <a id="closeBtn" class="closebtn">×</a>
+        <div class="overlay-content">
+          <h4>Developers:</h4>
+          <a href="https://github.com/wilgert" target="_blank"
+            >Wilgert Velinga (Project Mentor)</a
+          >
+          <a href="https://github.com/Marwa-kwara" target="_blank"
+            >Marwa kwara</a
+          >
+          <a href="https://github.com/buraakkk" target="_blank">Burak ISIK</a>
+          <a href="https://github.com/MadyanNassar" target="_blank"
+            >Madyan Nassar</a
+          >
+          <a href="https://github.com/mahmood-ghaem" target="_blank"
+            >Sayed Mahmood Ghaemmaghami</a
+          >
+        </div>
+      </div>
+
+      <div class="helpMenubar" id="help_navbar">
+        <a id="help_closeBtn" class="closebtn">×</a>
+        <div class="overlay-content">
+          <h4>help</h4>
+        </div>
+      </div>
+
+      <div class="cheatMenubar" id="cheat_navbar">
+        <a id="cheat_closeBtn" class="closebtn">×</a>
+        <div class="overlay-content">
+          <h4>cheat</h4>
+        </div>
+      </div>
+    </div>
     <!-- Add other files here -->
     <script src="./src/data.js" type="module"></script>
     <script src="./src/init/index.js" type="module"></script>
-    
   </body>
 </html>
