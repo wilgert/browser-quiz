@@ -142,6 +142,99 @@ export const quizData = {
       selected: null,
       links: [],
     },
+    
+    {
+      title: 'JavaScript comments',
+      text: 'How do you insert a Single Line comment in a JavaScript file?',
+      answers: {
+        a: 'Single line comments start with \\',
+        b: 'Single line comments start with */',
+        c: 'Single line comments start with \*',
+        d: 'Single line comments start with //',
+      },
+      correct: 'd',
+      selected: null,
+      links: [
+        {
+          text: 'javascript.info',
+          href: 'https://javascript.info/comments',
+        },
+        {
+          text: 'MDN',
+          href:
+            'https://developer.mozilla.org/en-US/docs/MDN/Guidelines/Code_guidelines/JavaScript#javascript_comments',
+        },
+      ],
+    },
+    {
+      title: 'JavaScript HTML element',
+      text: 'Inside which HTML element do we put the JavaScript?',
+      answers: {
+        a: '<js></js>',
+        b: '<script></script>',
+        c: '<javascript></javascript>',
+        d: '<scripting></scripting>',
+      },
+      correct: 'b',
+      selected: null,
+      links: [
+        {
+          text: 'javascript.info',
+          href: 'https://javascript.info/hello-world',
+        },
+        {
+          text: 'MDN',
+          href:
+            'https://developer.mozilla.org/en-US/docs/Web/HTML/Element/script',
+        },
+      ],
+    },
+    {
+      title: 'JavaScript WHILE loop',
+      text: 'How does a WHILE loop start?',
+      answers: {
+        a: 'while(i <= 0)',
+        b: 'while(i <= 0 i++)',
+        c: 'while i <= 0',
+        d: 'while (i++ i <= 0)',
+      },
+      correct: 'a',
+      selected: null,
+      links: [
+        {
+          text: 'javascript.info',
+          href: 'https://javascript.info/while-for',
+        },
+        {
+          text: 'MDN',
+          href:
+            'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/while',
+        },
+      ],
+    },
+    {
+      title: 'JavaScript IF statement',
+      text: 'How to write an IF statement in JavaScript?',
+      answers: {
+        a: 'if (i==5) ',
+        b: 'if {i==5} ',
+        c: 'if i==5 {} ',
+        d: 'if [i==5] ',
+      },
+      correct: 'a',
+      selected: null,
+      links: [
+        {
+          text: 'javascript.info',
+          href: 'https://javascript.info/ifelse',
+        },
+        {
+          text: 'MDN',
+          href:
+            'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/if...else',
+        },
+      ],
+    },
     {
       title: 'Automatic type conversion',
       text: 'What would be the result of 3+2+"7"?',
