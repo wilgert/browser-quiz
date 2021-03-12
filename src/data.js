@@ -1,18 +1,13 @@
 'use strict';
-
 /* Program Data
-
   in this file you can declare variables to store important data for your program
   the data can only be primitives, objects or arrays
   do not store dom elements in these variables!!!!
     your handlers will query the DOM each time they need to make a change
-
   these variables will be imported by your handlers when necessary
     not by your logic
     not by your listeners
-
 */
-
 // this is example data for the starter demo
 //  delete this data when you begin and use the own quiz data instead
 /**
@@ -24,7 +19,6 @@ export const data = {
   separator: '|',
   lines: [],
 };
-
 // here's a suggestion for your game's state, see if this works for your team
 //  there are many ways to represent your game as data!
 /**
@@ -103,12 +97,12 @@ export const quizData = {
       selected: null,
       links: [
         {
-          text: 'Link about this question 1',
-          href: 'https://',
+          text: 'JavaScript - Wikipedia',
+          href: 'https://en.wikipedia.org/wiki/JavaScript',
         },
         {
-          text: 'Link about this question 2',
-          href: 'https://',
+          text: 'JavaScript History - W3Schools',
+          href: 'https://www.w3schools.com/js/js_history.asp',
         },
       ],
     },
@@ -125,12 +119,13 @@ export const quizData = {
       selected: null,
       links: [
         {
-          text: 'Link about this question 1',
-          href: 'https://',
+          text: 'javascript.info',
+          href: 'https://javascript.info/object-methods',
         },
         {
-          text: 'Link about this question 2',
-          href: 'https://',
+          text: 'MDN',
+          href:
+            'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/this',
         },
       ],
     },
@@ -147,12 +142,13 @@ export const quizData = {
       selected: null,
       links: [
         {
-          text: 'Link about this question 1',
-          href: 'https://',
+          text: 'javascript.info',
+          href: 'https://javascript.info/types',
         },
         {
-          text: 'Link about this question 2',
-          href: 'https://',
+          text: 'MDN',
+          href:
+            'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures',
         },
       ],
     },
@@ -169,23 +165,23 @@ export const quizData = {
       selected: null,
       links: [
         {
-          text: 'Link about this question 1',
-          href: 'https://',
+          text: 'JavaScript NaN Property',
+          href: 'https://www.w3schools.com/jsref/jsref_number_nan.asp',
         },
         {
-          text: 'Link about this question 2',
-          href: 'https://',
+          text: 'MDN',
+          href:
+            'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/NaN',
         },
       ],
     },
-    
     {
       title: 'JavaScript comments',
       text: 'How do you insert a Single Line comment in a JavaScript file?',
       answers: {
         a: 'Single line comments start with \\',
         b: 'Single line comments start with */',
-        c: 'Single line comments start with \*',
+        c: 'Single line comments start with *',
         d: 'Single line comments start with //',
       },
       correct: 'd',
@@ -284,12 +280,13 @@ export const quizData = {
       selected: null,
       links: [
         {
-          text: 'Link about this question 1',
-          href: 'https://',
+          text: 'javascript.info',
+          href: 'https://javascript.info/type-conversions',
         },
         {
-          text: 'Link about this question 2',
-          href: 'https://',
+          text: 'MDN',
+          href:
+            'https://developer.mozilla.org/en-US/docs/Glossary/Type_Conversion',
         },
       ],
     },
@@ -306,12 +303,14 @@ export const quizData = {
       selected: null,
       links: [
         {
-          text: 'Link about this question 1',
-          href: 'https://',
+          text: 'MDN',
+          href:
+            'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined',
         },
         {
-          text: 'Link about this question 2',
-          href: 'https://',
+          text: 'undefined value',
+          href:
+            'https://en.wikipedia.org/wiki/Undefined_value#:~:text=In%20computing%20(particularly%2C%20in%20programming,%22%20(but%20defined)%20values.',
         },
       ],
     },
@@ -328,12 +327,13 @@ export const quizData = {
       selected: null,
       links: [
         {
-          text: 'Link about this question 1',
-          href: 'https://',
+          text: 'JavaScript Operators ',
+          href: 'https://www.w3schools.com/js/js_operators.asp',
         },
         {
-          text: 'Link about this question 2',
-          href: 'https://',
+          text: 'Operator precedence',
+          href:
+            'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Operator_Precedence',
         },
       ],
     },
