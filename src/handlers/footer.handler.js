@@ -2,10 +2,10 @@ import { quizData } from '../data.js';
 import { updateQuiz } from './quiz.handler.js';
 import { scoreView } from '../views/score.view.js';
 import { updateRealScore } from '../handlers/realScore.handler.js';
+import { removeQuestion } from '../views/question.view.js';
 
 export const footerHandler = (event) => {
-  const quizContainer = document.querySelector('.quizContainer');
-  quizContainer.remove();
+  removeQuestion();
 
   if (event.target.id === 'nextButton') {
     if (quizData.quiz.currentQuestion < quizData.questions.length) {

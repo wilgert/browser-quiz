@@ -254,7 +254,6 @@ h4 {
 .overlay {
   background-color: rgba(44, 44, 56, 0.95);
   position: absolute;
-  width: 80%;
   height: 100%;
   width: 0;
   z-index: 1000;
@@ -265,13 +264,16 @@ h4 {
 
 .overlay-content {
   position: relative;
-  top: 25%;
+  top: 15%;
   width: 100%;
   text-align: center;
   margin-top: 30px;
+  white-space: nowrap;
 }
 
-.overlay a {
+.overlay a,
+.helpMenubar a,
+.cheatMenubar a {
   padding: 8px;
   text-decoration: none;
   font-size: 1.1em;
@@ -281,11 +283,17 @@ h4 {
 }
 
 .overlay a:hover,
-.overlay a:focus {
+.overlay a:focus,
+.helpMenubar a:hover,
+.helpMenubar a:focus,
+.cheatMenubar a:hover,
+.cheatMenubar a:focus {
   color: #f1f1f1;
 }
 
-.overlay .closebtn {
+.overlay .closebtn,
+.helpMenubar .closebtn,
+.cheatMenubar .closebtn {
   position: absolute;
   top: 0px;
   right: 15px;
@@ -293,16 +301,48 @@ h4 {
   cursor: pointer;
 }
 
-.menuBars {
+.menuBars,
+.helpButton,
+.cheatButton {
   position: absolute;
-  top: 22px;
-  left: 22px;
   cursor: pointer;
 }
 
-.menuBars a {
+.menuBars a,
+.helpButton a,
+.cheatButton a {
   color: #fff;
 }
-.menuBars a:hover {
+.menuBars a:hover,
+.helpButton a:hover,
+.cheatButton a:hover {
   color: #2c2c38;
+}
+
+.menuBars {
+  top: 22px;
+  left: 22px;
+}
+
+.helpButton {
+  top: 22px;
+  right: 22px;
+}
+
+.cheatButton {
+  top: 22px;
+  right: 44px;
+}
+
+.helpMenubar,
+.cheatMenubar {
+  background-color: rgba(44, 44, 56, 0.95);
+  position: absolute;
+  width: 50%;
+  height: 0;
+  z-index: 1001;
+  right: 0;
+  top: 60px;
+  overflow-y: hidden;
+  transition: 0.5s;
 }

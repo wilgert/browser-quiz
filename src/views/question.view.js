@@ -6,40 +6,24 @@
  * @param {{}} question - an array of strings, each one will be mirrored around the separator on a new line
  * @return {HTMLDivElement} a PRE element with the rendered string content
  */
-import { quizData } from '../data.js';
 
 export const questionView = (question = {}) => {
-  const quizContainer = document.createElement('div');
-  quizContainer.classList.add('quizContainer', 'showQuiz');
+  const quizContainer = document.querySelector('.quizContainer');
+  quizContainer.classList.add('showQuiz');
 
-  const menuBars = document.createElement('div');
-  menuBars.classList.add('menuBars');
-  menuBars.innerHTML = `<a id='menuBtn' class="navbar-icon">
-                        <i class="fa fa-bars"></i>
-                      </a>`;
-  quizContainer.appendChild(menuBars);
-
-  const overlay = document.createElement('div');
-  overlay.classList.add('overlay');
-  overlay.setAttribute('id', 'overlay_navbar');
-  overlay.innerHTML = `<a id='closeBtn' class="closebtn">&times;</a>
-                      <div class="overlay-content">
-                        <h4>Hint</h4>
-                        <a href="${question.links[0].href}" target="_blank">${question.links[0].text}</a>
-                        <a href="${question.links[1].href}" target="_blank">${question.links[1].text}</a>
-                      </div>`;
-  quizContainer.appendChild(overlay);
-
-  const quizHeader = document.createElement('h3');
-  quizHeader.innerText = question.title;
-  quizContainer.appendChild(quizHeader);
+  const questionHeader = document.createElement('h3');
+  questionHeader.setAttribute('id', 'questionHeader');
+  questionHeader.innerText = question.title;
+  quizContainer.appendChild(questionHeader);
 
   const questionText = document.createElement('div');
+  questionText.setAttribute('id', 'questionText');
   questionText.classList.add('question', 'm-5');
   questionText.innerText = question.text;
   quizContainer.appendChild(questionText);
 
   const answerButtons = document.createElement('div');
+  answerButtons.setAttribute('id', 'answerButtons');
   answerButtons.classList.add('answerButtons', 'd-grid', 'gap-2', 'm-5');
 
   for (const key in question.answers) {
@@ -57,5 +41,18 @@ export const questionView = (question = {}) => {
   realScoreText.classList.add('realScoreText');
   quizContainer.appendChild(realScoreText);
 
-  return quizContainer;
+  //return quizContainer;
+};
+
+export const removeQuestion = () => {
+  const questionHeader = document.querySelector('#questionHeader');
+  const questionText = document.querySelector('#questionText');
+  const answerButtons = document.querySelector('#answerButtons');
+  const realScoreText = document.querySelector('#realScoreText');
+  const quizFooter = document.querySelector('.quizFooter');
+  questionHeader.remove();
+  questionText.remove();
+  answerButtons.remove();
+  realScoreText.remove();
+  quizFooter.remove();
 };

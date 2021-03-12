@@ -12,10 +12,11 @@ export const quizHandler = (event) => {
 };
 
 export const updateQuiz = (quiz, currentQuestion) => {
-  const quizContainer = questionView(quiz);
+  questionView(quiz);
+  const quizContainer = document.querySelector('.quizContainer');
   const quizFooter = createFooter(currentQuestion, quizData.questions.length);
   quizContainer.appendChild(quizFooter);
-  document.body.appendChild(quizContainer);
+  //document.body.appendChild(quizContainer);
 
   addFooterListener();
   addSelectingListener();
