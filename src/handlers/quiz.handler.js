@@ -16,8 +16,6 @@ export const updateQuiz = (quiz, currentQuestion) => {
   const quizContainer = document.querySelector('.quizContainer');
   const quizFooter = createFooter(currentQuestion, quizData.questions.length);
   quizContainer.appendChild(quizFooter);
-  //document.body.appendChild(quizContainer);
-  console.log("Quiz is updated"); //We updated the all parts that's why we call that functions again !!!
   addFooterListener(); 
   addSelectingListener();
   addMenuBarListener();
