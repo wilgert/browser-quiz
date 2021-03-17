@@ -9,7 +9,8 @@
 //   document.querySelector('.navbar-btn-box').classList.toggle('change');
 // }
 // // #end region
-
+//switch case and also use one function for them
+//switch case is more readable 
 export const openNavbar = (event) => {
   const icon = event.target;
   const aTag = icon.closest('a');

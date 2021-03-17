@@ -10,7 +10,7 @@ export const nextButtonHandler = () => {
   if (quizData.quiz.currentQuestion < quizData.questions.length) {
     quizData.quiz.currentQuestion++;
   }
-  if (quizData.quiz.currentQuestion === quizData.questions.length) {
+  if (quizData.quiz.currentQuestion === quizData.questions.length) { //end of the quiz
     scoreView(quizData.quiz);
     closeForLastPage();
   } else {
