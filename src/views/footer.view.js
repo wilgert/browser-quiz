@@ -10,4 +10,5 @@ export const createFooter = (currentQuestion, totalQuestions) => {
   >Next <i class="fa fa-arrow-right nextArrow"></i
 ></a>`;
   return quizFooter;
+  
 };
