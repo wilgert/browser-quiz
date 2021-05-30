@@ -9,7 +9,8 @@
 //   document.querySelector('.navbar-btn-box').classList.toggle('change');
 // }
 // // #end region
-
+//switch case and also use one function for them
+//switch case is more readable 
 export const openNavbar = (event) => {
   const icon = event.target;
   const aTag = icon.closest('a');
@@ -37,4 +38,9 @@ export const closeNavbar = (event) => {
   if (event.target.id === 'cheat_closeBtn') {
     document.getElementById('cheat_navbar').style.height = '0%';
   }
+};
+
+export const closeForLastPage = () => {
+  document.getElementById('help_navbar').style.height = '0%';
+  document.getElementById('cheat_navbar').style.height = '0%';
 };

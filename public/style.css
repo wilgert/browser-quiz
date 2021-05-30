@@ -256,7 +256,7 @@ h4 {
   position: absolute;
   height: 100%;
   width: 0;
-  z-index: 1000;
+  z-index: 1010;
   left: 0;
   overflow-x: hidden;
   transition: 0.5s;
@@ -299,6 +299,14 @@ h4 {
   right: 15px;
   font-size: 30px;
   cursor: pointer;
+}
+
+.cheat-overlay-content {
+  top: 15%;
+  width: 100%;
+  text-align: center;
+  margin-top: 40px;
+  color: #fff;
 }
 
 .menuBars,
@@ -369,4 +377,14 @@ h4 {
 
 .tooltip:hover .tooltiptext {
   visibility: visible;
+}
+
+.blink_icon {
+  float: right;
+  animation: blinker 1.5s linear infinite;
+}
+@keyframes blinker {
+  50% {
+    opacity: 0;
+  }
 }

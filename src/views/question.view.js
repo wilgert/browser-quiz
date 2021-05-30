@@ -29,7 +29,7 @@ export const questionView = (question = {}) => {
   for (const key in question.answers) {
     const answerButton = document.createElement('button');
     answerButton.classList.add('btn', 'btn-primary', 'btn-lg', 'w-100');
-    answerButton.setAttribute('data-key', key);
+    answerButton.setAttribute('data-key', key); // descriptive name instead of key 
     answerButton.setAttribute('data-correct', question.correct);
     answerButton.innerText = question.answers[key];
     answerButtons.appendChild(answerButton);
@@ -41,7 +41,16 @@ export const questionView = (question = {}) => {
   realScoreText.classList.add('realScoreText');
   quizContainer.appendChild(realScoreText);
 
-  //return quizContainer;
+  const helpLink1 = document.querySelector('#help_link1');
+  helpLink1.setAttribute('href', question.links[0].href);
+  helpLink1.innerText = question.links[0].text;
+  const helpLink2 = document.querySelector('#help_link2');
+  helpLink2.setAttribute('href', question.links[1].href);
+  helpLink2.innerText = question.links[1].text;
+
+  const cheatText = document.querySelector('#cheat_text');
+  cheatText.innerText =
+    question.correct + ' :   ' + question.answers[question.correct];
 };
 
 export const removeQuestion = () => {
